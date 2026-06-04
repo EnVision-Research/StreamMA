@@ -33,6 +33,10 @@
   <a href="https://scholar.google.com/citations?user=kwDXTpAAAAAJ&hl=en"><b>Cong&nbsp;Chen</b></a><sup>3</sup> &nbsp;·&nbsp;
   <a href="https://xander23333.github.io/index.html"><b>Xander&nbsp;Xu</b></a><sup>2&#42;</sup> &nbsp;·&nbsp;
   <a href="https://scholar.google.com/citations?user=n7j4bJUAAAAJ&hl=en"><b>Ying-Cong&nbsp;Chen</b></a><sup>1,4&#42;</sup>
+  <br><br>
+  <sup>1</sup>HKUST(GZ) &nbsp;·&nbsp; <sup>2</sup>Alibaba&nbsp;Group &nbsp;·&nbsp; <sup>3</sup>ZJU &nbsp;·&nbsp; <sup>4</sup>HKUST
+  <br>
+  <sub><sup>&#42;</sup>Co-corresponding authors</sub>
 </p>
 
 ---
