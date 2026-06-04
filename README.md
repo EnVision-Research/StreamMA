@@ -30,14 +30,9 @@
   <a href="https://zhenyangcs.github.io/"><b>Zhen&nbsp;Yang</b></a><sup>1</sup> &nbsp;·&nbsp;
   <a href="https://xuxiaogang.com/"><b>Xiaogang&nbsp;Xu</b></a><sup>3</sup> &nbsp;·&nbsp;
   <a href="https://encounter1997.github.io/"><b>Wen&nbsp;Wang</b></a><sup>3</sup> &nbsp;·&nbsp;
-  <a href="https://scholar.google.com/citations?user=kwDXTpAAAAAJ&hl=en"><b>Cong&nbsp;Chen</b></a><sup>3</sup>
-  <br>
+  <a href="https://scholar.google.com/citations?user=kwDXTpAAAAAJ&hl=en"><b>Cong&nbsp;Chen</b></a><sup>3</sup> &nbsp;·&nbsp;
   <a href="https://xander23333.github.io/index.html"><b>Xander&nbsp;Xu</b></a><sup>2&#42;</sup> &nbsp;·&nbsp;
   <a href="https://scholar.google.com/citations?user=n7j4bJUAAAAJ&hl=en"><b>Ying-Cong&nbsp;Chen</b></a><sup>1,4&#42;</sup>
-  <br><br>
-  <sup>1</sup>HKUST(GZ) &nbsp;·&nbsp; <sup>2</sup>Alibaba&nbsp;Group &nbsp;·&nbsp; <sup>3</sup>ZJU &nbsp;·&nbsp; <sup>4</sup>HKUST
-  <br>
-  <sub><sup>&#42;</sup>Co-corresponding authors</sub>
 </p>
 
 ---
@@ -93,11 +88,6 @@ asyncio.run(main())
 # Graph   A → B → C, with shortcut A → C
 {"A": {..., "next": ["B", "C"]}, "B": {..., "next": ["C"]}, "C": {...}}
 ```
-
-<p align="center">
-💡 <b>Random sample speedups</b> observed across topologies on HMMT 2026:<br>
-<b>Graph 1.92×</b> &nbsp;·&nbsp; <b>Chain 1.84×</b> &nbsp;·&nbsp; <b>Tree 1.82×</b>
-</p>
 
 ---
 
