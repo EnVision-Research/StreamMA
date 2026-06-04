@@ -8,8 +8,7 @@
 </h1>
 
 <p align="center">
-  <b><i>Streaming Communication in Multi-Agent Reasoning</i></b><br>
-  <sub>Let downstream agents start working <i>before</i> upstream agents finish.</sub>
+  <b><i>Streaming Communication in Multi-Agent Reasoning</i></b>
 </p>
 
 <p align="center">
@@ -22,7 +21,7 @@
   <!--
   <a href="#">
     <img src="https://img.shields.io/badge/Zhihu-Blog-0084FF?logo=zhihu&logoColor=white&style=flat-square" alt="Zhihu"></a>
-  <a href="#">
+  <a href="https://www.xiaohongshu.com/discovery/item/6a20e2ae000000003700c8a5">
     <img src="https://img.shields.io/badge/RedNote-Post-FF2442?logo=xiaohongshu&logoColor=white&style=flat-square" alt="RedNote"></a>
   -->
 </p>
@@ -89,130 +88,6 @@
   </td>
 </tr>
 </table>
-
----
-
-<h2 align="center">🎯 Key Contributions</h2>
-
-<div align="center">
-
-| | |
-|---|---|
-| 📡 **Streaming protocol** | Step-level forwarding replaces waiting for full responses — *lower latency* **and** *higher accuracy*. |
-| 📐 **Three closed-form theorems** | Effectiveness ordering, speedup upper bound, and cost ratio for Stream / Serial / Single. |
-| 🚀 **Step-level scaling law** | A new orthogonal dimension: more steps per agent → better accuracy + higher speedup. |
-
-</div>
-
----
-
-<h2 align="center">📖 Abstract</h2>
-
-<p>
-Multi-agent reasoning systems adopt a <em>generate-then-transfer</em> paradigm that forces end-to-end latency to scale linearly with pipeline depth. We introduce <strong>StreamMA</strong>, a multi-agent reasoning system that streams each <em>reasoning step</em> to downstream agents as soon as it is generated, pipelining adjacent agents and thus reducing latency.
-</p>
-
-<p>
-Surprisingly, this pipelining also <em>improves effectiveness</em>: because multi-step reasoning quality is non-uniform and early steps are more reliable than later ones, working with these reliable early steps instead of the full chain prevents error-prone late steps from misleading downstream agents. We formalise both advantages with the first closed-form joint analysis of stream, serial, and single protocols, deriving the effectiveness ordering, speedup upper bound, and cost ratio.
-</p>
-
-<p>
-Across eight reasoning benchmarks spanning mathematics, science, and code, two frontier LLMs (Claude Opus 4.6 and GPT-5.4), and three topologies (Chain, Tree, Graph), <strong>StreamMA</strong> outperforms both baselines (avg. <strong>+7.3&nbsp;pp</strong>, max <strong>+22.4&nbsp;pp</strong> on HMMT 2026 with Claude Opus 4.6-high). We further uncover a <em>step-level scaling law</em>: increasing per-agent steps consistently improves both effectiveness and efficiency, a new scaling dimension orthogonal to and composable with agent-count scaling.
-</p>
-
----
-
-<h2 align="center">💡 The counter-intuitive finding</h2>
-
-<p align="center"><i>When context arrives matters more than how much context arrives.</i></p>
-
-<p align="center">
-  <img src="imgs/insight.png" alt="Counter-intuitive finding" width="960">
-</p>
-
-<p align="center">By the time the unreliable tail arrives at Agent², it has already drifted far enough into its own reasoning that the tail's impact is diluted. The same property gives the speedup <i>for free</i>.</p>
-
----
-
-<h2 align="center">📐 Three closed-form theorems</h2>
-
-<p align="center">The first joint analysis of Stream, Serial and Single protocols.<br>One ordering for effectiveness, one upper bound for speed, one ratio for cost.</p>
-
-<details open>
-<summary><b>Theorem 1 · Effectiveness Ordering</b> — six regimes, only two of which Stream wins (and we always land in those)</summary>
-
-<p align="center">
-  <img src="imgs/theory_1.png" alt="Theorem 1 - Effectiveness Ordering" width="960">
-</p>
-
-<p><b>Empirical finding</b>: with frontier LLMs the head is reliably above <code>p*</code> and the tail dips below it, so we land in regimes I.a / I.b — the <i>Stream-advantage sweet spot</i>.</p>
-</details>
-
-<details>
-<summary><b>Theorem 2 · Speedup Upper Bound</b> — closed-form, tight to 83% measured</summary>
-
-<p align="center">
-  <img src="imgs/theory_2.png" alt="Theorem 2 - Speedup Upper Bound" width="960">
-</p>
-
-<p>At <code>S=64, A=64</code> the bound predicts <b>32.3×</b>; we measure <b>26.9×</b> — that is <b>83%</b> of the theoretical limit.</p>
-</details>
-
-<details>
-<summary><b>Theorem 3 · Cost Ratio</b> — KV-cache makes Stream cheaper even at ρ=1</summary>
-
-<p align="center">
-  <img src="imgs/theory_3.png" alt="Theorem 3 - Cost Ratio" width="960">
-</p>
-
-<p>With <b>Claude Opus 4.6 pricing</b> ($5 / $25 / $0.5 per MTok, input/output/cache) and <code>A=S=4</code>, the bound becomes <b>0.925ρ</b> with full KV-cache — Stream <b>saves ≈ 7.5%</b> even when <code>ρ = 1</code>.</p>
-</details>
-
----
-
-<h3 align="center"><sub>RESULTS · PART 1</sub></h3>
-<h2 align="center">Effectiveness — Stream is more accurate</h2>
-
-<h3 align="center">Step-level perturbation — head/tail asymmetry</h3>
-
-<p align="center">Same upstream output, two failure modes: corrupting the tail leaves Stream untouched; corrupting the head trips it.<br>The asymmetry is exactly what Theorem 1 predicts.</p>
-
-<p align="center">
-  <img src="imgs/perturb.png" alt="Step-level perturbation" width="960">
-</p>
-
-<h3 align="center">Main results — eight benchmarks, two LLMs, three topologies</h3>
-
-<p align="center">
-  <img src="imgs/results_table.png" alt="Main results table" width="960">
-</p>
-
-<p align="center"><sub>StreamMA rows shaded; numbers reproduce Tab.&nbsp;1 of the paper.</sub></p>
-
----
-
-<h3 align="center"><sub>RESULTS · PART 2</sub></h3>
-<h2 align="center">Efficiency — Stream is faster &amp; cheaper</h2>
-
-<h3 align="center">Step-level scaling law — a new orthogonal dimension</h3>
-
-<p align="center">At fixed agent count <code>A</code>, simply asking each agent to think in <em>more</em> finer steps <code>S</code> improves both speed and accuracy.<br>Fully composable with agent-count scaling.</p>
-
-<p align="center">
-  <img src="imgs/scaling.png" alt="Step-level scaling law" width="960">
-</p>
-
-<p align="center">GPT-5.4-medium · <code>A=64</code>, <code>S=auto</code> baseline 68.2% → <code>S=64</code> lifts to <b>73.5%</b> with <b>26.9× speedup</b>.</p>
-
-<h3 align="center">Cost–accuracy Pareto — Stream strictly dominates</h3>
-
-<p align="center">Three-agent chain on HMMT 2026 with majority voting over <code>N ∈ {1, 4, 16}</code> replicas. Claude Opus 4.6 pricing.</p>
-
-<p align="center">
-  <img src="imgs/pareto.png" alt="Cost-accuracy Pareto" width="960">
-</p>
-
-<p align="center"><b>Stream×4 ($2.75, 90.9%)</b> beats <b>Serial×16 ($5.46, 89.4%)</b> — half the cost, higher accuracy. With KV-cache hits, the same 90.9% drops to <b>$1.61</b>.</p>
 
 ---
 
