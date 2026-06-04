@@ -1,1 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34a878"/>
+      <stop offset="1" stop-color="#0a3320"/>
+    </linearGradient>
+  </defs>
 
+  <!-- Rounded green badge -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+
+  <!-- Cascading agent bars: equal length 40, cascade step 8.
+       Each bar = an agent's reasoning timeline; bars overlap because every
+       downstream agent starts before the upstream one finishes (= streaming). -->
+
+  <!-- Agent A (sky) -->
+  <rect x="4"  y="14" width="40" height="8" rx="4" fill="#ffffff" opacity="0.18"/>
+  <rect x="4"  y="14" width="28" height="8" rx="4" fill="#7fb5d9"/>
+
+  <!-- Agent B (emerald) -->
+  <rect x="12" y="28" width="40" height="8" rx="4" fill="#ffffff" opacity="0.18"/>
+  <rect x="12" y="28" width="22" height="8" rx="4" fill="#7ec3a0"/>
+
+  <!-- Agent C (amber) -->
+  <rect x="20" y="42" width="40" height="8" rx="4" fill="#ffffff" opacity="0.18"/>
+  <rect x="20" y="42" width="14" height="8" rx="4" fill="#e9c373"/>
+
+  <!-- Pulse cursors at the live head of each bar.
+       Two-layer: ripple halo (outer, expanding+fading) + breathing core (inner).
+       Staggered begin times → relay-like flow across agents. -->
+
+  <!-- Agent A -->
+  <circle cx="32" cy="18" r="1.6" fill="#ffffff">
+    <animate attributeName="r"       values="1.6;4.5;7"   dur="1.4s" begin="0s"    repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.4;0"     dur="1.4s" begin="0s"    repeatCount="indefinite"/>
+  </circle>
+  <circle cx="32" cy="18" r="1.9" fill="#ffffff">
+    <animate attributeName="r"       values="1.6;3.0;1.6" dur="1.4s" begin="0s"    repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6"   dur="1.4s" begin="0s"    repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Agent B -->
+  <circle cx="34" cy="32" r="1.6" fill="#ffffff">
+    <animate attributeName="r"       values="1.6;4.5;7"   dur="1.4s" begin="0.45s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.4;0"     dur="1.4s" begin="0.45s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="34" cy="32" r="1.9" fill="#ffffff">
+    <animate attributeName="r"       values="1.6;3.0;1.6" dur="1.4s" begin="0.45s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6"   dur="1.4s" begin="0.45s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Agent C -->
+  <circle cx="34" cy="46" r="1.6" fill="#ffffff">
+    <animate attributeName="r"       values="1.6;4.5;7"   dur="1.4s" begin="0.9s"  repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.4;0"     dur="1.4s" begin="0.9s"  repeatCount="indefinite"/>
+  </circle>
+  <circle cx="34" cy="46" r="1.9" fill="#ffffff">
+    <animate attributeName="r"       values="1.6;3.0;1.6" dur="1.4s" begin="0.9s"  repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6"   dur="1.4s" begin="0.9s"  repeatCount="indefinite"/>
+  </circle>
+</svg>
