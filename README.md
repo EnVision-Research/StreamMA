@@ -99,9 +99,6 @@ asyncio.run(main())
 
 <p align="center"><code>RunLogger</code> records per-agent token counts, KV-cache hits, API time, and an ASCII timeline of streaming segments:</p>
 
-<details>
-<summary>Click to expand example</summary>
-
 ```json
 {
   "summary": {
@@ -137,7 +134,6 @@ asyncio.run(main())
   }
 }
 ```
-</details>
 
 ---
 
