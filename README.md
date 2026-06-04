@@ -145,7 +145,7 @@ asyncio.run(main())
 
 ```bibtex
 @article{yang2026streamma,
-  title={StreamMA: Streaming Communication in Multi-Agent Reasoning},
+  title={Streaming Communication in Multi-Agent Reasoning},
   author={Yang, Zhen and Xu, Xiaogang and Wang, Wen and Chen, Cong and Xu, Xander and Chen, Ying-Cong},
   journal={arXiv preprint arXiv:2606.05158},
   year={2026}
