@@ -42,55 +42,6 @@
 
 ---
 
-<!--
-<h2 align="center">🏆 SimpleBench — StreamMA sets a new SOTA</h2>
-
-<div align="center">
-
-| Rank | Model | Score |
-|:----:|:------|------:|
-| 🥇 | **StreamMA**&nbsp;<sub>(GPT-5.4-medium, A4 S4)</sub> | **98.0%** |
-| 1 | Gemini 3.1 Pro Preview | 79.6% |
-| 2 | GPT-5.5 Pro | 76.9% |
-| 3 | Gemini 3 Pro Preview | 76.4% |
-| 4 | GPT-5.4 Pro | 74.1% |
-| 5 | GPT-5.5 | 69.0% |
-
-</div>
-
-<p align="center"><sub>Source: <a href="https://epoch.ai/benchmarks/simplebench">epoch.ai/benchmarks/simplebench</a> · StreamMA evaluated on 10 public questions, 5 runs avg.</sub></p>
-
--->
----
-
-<h2 align="center">📊 TL;DR</h2>
-
-<p align="center">
-  <img src="imgs/streamma_method.gif" alt="StreamMA method animation" width="960">
-</p>
-
-<table align="center">
-<tr>
-  <td align="center" width="33%">
-    <h2>+7.3&nbsp;pp</h2>
-    <b>Average accuracy gain</b><br>
-    <sub>8 benchmarks · Claude Opus 4.6<br>peak <b>+22.4 pp</b> on HMMT 2026</sub>
-  </td>
-  <td align="center" width="33%">
-    <h2>26.9×</h2>
-    <b>Wall-clock speedup</b><br>
-    <sub>A=64, S=64<br>83% of theoretical bound</sub>
-  </td>
-  <td align="center" width="34%">
-    <h2>½ cost</h2>
-    <b>Stream×4 beats Serial×16</b><br>
-    <sub>$2.75 vs $5.46<br>higher accuracy at half the price</sub>
-  </td>
-</tr>
-</table>
-
----
-
 <h2 align="center">⚡ Quick Start</h2>
 
 ```bash
