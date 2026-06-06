@@ -18,12 +18,6 @@
     <img src="https://img.shields.io/badge/Project-Page-2f9e6e?style=flat-square" alt="Project Page"></a>
   <a href="#citation">
     <img src="https://img.shields.io/badge/BibTeX-Cite-eaeaea?style=flat-square" alt="BibTeX"></a>
-  <!--
-  <a href="#">
-    <img src="https://img.shields.io/badge/Zhihu-Blog-0084FF?logo=zhihu&logoColor=white&style=flat-square" alt="Zhihu"></a>
-  <a href="https://www.xiaohongshu.com/discovery/item/6a20e2ae000000003700c8a5">
-    <img src="https://img.shields.io/badge/RedNote-Post-FF2442?logo=xiaohongshu&logoColor=white&style=flat-square" alt="RedNote"></a>
-  -->
 </p>
 
 <p align="center">
@@ -144,7 +138,7 @@ asyncio.run(main())
 <p align="center">If you find StreamMA useful, please cite:</p>
 
 ```bibtex
-@article{yang2026streamma,
+@article{yang2026streaming,
   title={Streaming Communication in Multi-Agent Reasoning},
   author={Yang, Zhen and Xu, Xiaogang and Wang, Wen and Chen, Cong and Xu, Xander and Chen, Ying-Cong},
   journal={arXiv preprint arXiv:2606.05158},
