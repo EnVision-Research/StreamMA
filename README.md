@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <b>🏆 Oral + Award Nomination</b>
+  <img src="imgs/award-nomination.svg" width="254" height="36" alt="🏆 Oral + Award Nomination">
 </p>
 
 <p align="center">
