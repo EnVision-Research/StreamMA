@@ -12,6 +12,10 @@
 </p>
 
 <p align="center">
+  <b>🏆 Oral + Award Nomination</b>
+</p>
+
+<p align="center">
   <a href="https://arxiv.org/abs/2606.05158">
     <img src="https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&style=flat-square" alt="arXiv"></a>
   <a href="https://zhenyangcs.github.io/StreamMA-website">
